@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>OODA BOND Digital Catalogue</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind Css  -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- External JS dependencies -->
+  <script type="text/javascript" src="assets/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="assets/js/underscore-min.js"></script>
+  <script type="text/javascript" src="assets/js/backbone-min.js"></script>
+
+  <!-- Turn.js UI Kit -->
+  <script type="text/javascript" src="assets/js/turn.min.js"></script>
+
+  <!-- App dependencies -->
+  <script type="text/javascript" src="assets/js/app.js"></script>
+
+
+  <!-- External CSS dependencies -->
+  <link type="text/css" rel="stylesheet" href="assets/css/font-awesome.min.css">
+  </link>
+
+
+  <!-- App CSS dependencies -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/main.css?v=3">
+  </link>
+
+  <!--  CSS dependencies -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/lightbox.css?v=3">
+  </link>
+
+
+  <!------ Fontawesome link  ------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tilt+Neon&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/cataloguemain.css?v=3">
+
+  <!-- Favicon icon -->
+  <link rel="icon" href="../assets/images/Airlock-Logo.gif" type="image/x-icon">
+
+  <!-- Fontawesome icon  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css?v=3">
+
+  <style type="text/css">
+    .page-1 .s1 {
+      -webkit-transform: translateY(100px);
+      -webkit-transition: all 1.5s;
+      opacity: 0;
+    }
+
+    .page-1 .s2 {
+      -webkit-transform: translateY(100px);
+      -webkit-transition: all 1s;
+      -webkit-transition-delay: 0.5s;
+      opacity: 0;
+      font-family: 'Carrois Gothic SC', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      text-align: center;
+      color: white;
+    }
+
+    .page-1.animation-on .s1 {
+      -webkit-transform: translateY(0px);
+      opacity: 1;
+    }
+
+    .page-1.animation-on .s2 {
+      -webkit-transform: translateY(0px);
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- ***************************************************** DC started *************************************************-->
+
+  <div class="catalog-app">
+    <div id="viewer">
+
+      <button id="navToggle" class="nav-toggle-btn hidden!" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger-icon">
+          <span class="hamburger-bar bar1"></span>
+          <span class="hamburger-bar bar2"></span>
+          <span class="hamburger-bar bar3"></span>
+        </span>
+      </button>
+      <!-- Overlay -->
+      <div id="navOverlay" class="nav-overlay"></div>
+      <!-- Floating Table of Contents Nav -->
+      <nav id="tocNav" class="toc-floating" aria-label="Table of Contents">
+        <div class="toc-title">Table of contents</div>
+        <ul class="toc-list">
+          <!-- <li class="tb-link" data-page="1"><a> HOME</a></li>
+          <li class="tb-link" data-page="2"><a> LIST OF SERVICES</a></li>
+          <li class="tb-link" data-page="7" data-audio-path="../audios/about_us.mp3"><a> ABOUT US</a></li>
+          <li class="tb-link" data-page="8" data-audio-path="../audios/growth_story.mp3"><a> GROWTH STORY</a></li>
+          <li class="tb-link" data-page="9" data-audio-path="../audios/industry_solution.mp3"><a> INDUSTRY SOLUTION</a>
+          </li>
+          <li class="tb-link" data-page="10" data-audio-path="../audios/applications.mp3"><a> APPLICATIONS</a></li>
+          <li class="tb-link" data-page="11" data-audio-path="../audios/services.mp3"><a> SERVICES</a></li>
+          <li class="tb-link" data-page="28" data-audio-path="../audios/products.mp3"><a> PRODUCTS</a></li>
+          <li class="tb-link" data-page="40" data-audio-path="../audios/contact_us.mp3"><a> CONTACT US</a></li> -->
+          <li class="tb-link" data-page="1"><a>Home</a></li>
+          <li class="tb-link" data-page="4"><a>About</a></li>
+          <li class="tb-link" data-page="3"><a>Products</a></li>
+          <li class="tb-link" data-page="17"><a>Applications</a></li>
+          <li class="tb-link" data-page="28"><a>Contact us</a></li>
+        </ul>
+      </nav>
+
+<img src="../images/thumbnail/icon.svg" alt="foundation_thumbnails" id="navToggle1" class="absolute top-[5%] left-[2%] w-[2.5vw] cursor-pointer z-[910]  transition-transform duration-300 ease-out hover:scale-110 " style="transform: translateY(-50%); border: none; border-radius: 25%;"/>
+
+
+ 
+
+<div id="navOverlay1" class="nav-overlay1"></div>
+      
+      <nav id="tocNav1" class="toc-floating1 " aria-label="Table of Contents">
+       
+        <ul class="toc-list1 flex flex-col gap-[1vw] ">
+          <li class="tb-link cursor-pointer pb-[.5vw]" data-page="1" data-audio-path="../audios/home.mp3"><a class="w-[5.2vw] h-[7vw]"><img src="../images/thumbnail/page-1.png" class="mb-[.5vw]" /><p class="text-[.7vw] text-center mt-[.2vw] text-white">Home</p></a></li>
+          <li class="tb-link cursor-pointer pb-[.5vw]" data-page="2" data-audio-path="../audios/growth_story.mp3"><a class="w-[10vw] h-[7vw]"><img src="../images/thumbnail/page-2-3.png"  class="mb-[.5vw]"/><p class="text-[.7vw] text-center mt-[.2vw] text-white">Growth Story</p> </a></li>
+          <li class="tb-link cursor-pointer pb-[.5vw]" data-page="4" data-audio-path="../audios/about_us.mp3"><a class="w-[10vw] h-[7vw]"> <img src="../images/thumbnail/page-4-5.png" class="mb-[.5vw]" /><p class="text-[.7vw] text-center mt-[.2vw] text-white">About Us</p></a></li>
+          <li class="tb-link cursor-pointer pb-[.5vw]" data-page="5" data-audio-path="../audios/applications.mp3"><a class="w-[10vw] h-[7vw]"> <img src="../images/thumbnail/page-4-5.png" class="mb-[.5vw]" /><p class="text-[.7vw] text-center mt-[.2vw] text-white">Applications</p></a></li>
+      
+          <li class="tb-link cursor-pointer pb-[.5vw]" data-page="22" data-audio-path="../audios/products.mp3"><a class="w-[10vw] h-[7vw]"> <img src="../images/thumbnail/page-products.png" class="mb-[.5vw]"/><p class="text-[.7vw] text-center mt-[.2vw] text-white">Product Page</p></a></li>
+           <li class="tb-link cursor-pointer pb-[.5vw]" data-page="34" data-audio-path="../audios/contact_us.mp3"><a class="w-[5.2vw] h-[7vw]"><img src="../images/thumbnail/page-contact.png" class="mb-[.5vw]" /><p class="text-[.7vw] text-center mt-[.2vw] text-white">Contact</p></a></li>
+          
+          <!-- <li class="tb-link cursor-pointer pb-[.5vw]" data-page="10" ><a class="w-[5.2vw] h-[7vw]"> <img src="../images/thumbnail/page-1.png" class="mb-[.5vw]" /><p class="text-[.7vw] text-center mt-[.2vw] text-white">page 10</p></a></li> -->
+
+        </ul>
+      </nav>
+
+
+
+      
+     <img src="../images/thumbnail/share.svg" id="shareBtn" class="absolute bottom-[2%] left-[2%]  w-[2.5vw] cursor-pointer z-[910]  transition-transform duration-300 ease-out hover:scale-110 " style=" border: none; border-radius: 25%;"/>
+ 
+      <div class="share-menu" id="shareMenu" role="menu" aria-hidden="true">
+        <div class="share-link-row">
+          <input id="shareInput" type="text">
+          <button id="copyLinkBtn" class="copy-link-btn" role="menuitem">Copy Link</button>
+        </div>
+        <span class="copied-msg" id="copiedMsg">Copied!</span>
+      </div>
+
+
+      <!-- <div class="home-img-container">
+        <i class="fa-solid fa-house"></i>
+      </div> -->
+
+      <div class="full-screen">
+        <i class="fa-solid fa-expand"></i>
+      </div>
+      <div id="flipbook" class="ui-flipbook">
+
+
+
+
+
+
+     
+
+       
+
+        <!-- page 1 starts -->
+        <div class="page">
+          <img src="../images/bg/Background-img.webp" alt="" class="absolute w-[100%] h-[100%] top-0 left-0"> 
+          <img src="../images/thumbnail/logo.svg" alt="logo" class="absolute top-[1%] right-[4%] w-[8%]"/>
+          <img src="../images/home-page/premium-quality-products.svg" alt="" class="absolute w-[60%]  top-[3%] left-[10%]"> 
+          <div class="page_image1">
+          <img src="../images/home-page/home-page-line-1-img.webp" alt="" class="absolute w-[100%]  top-[6%] left-[0%] popup_images1"> 
+          <img src="../images/home-page/home-page-line-2-img.webp" alt="" class="absolute w-[100%]  top-[26%] left-[0%] popup_images1"> 
+          <img src="../images/home-page/home-page-line-3-img.webp" alt="" class="absolute w-[100%]  top-[46.5%] left-[0%] popup_images1"> 
+          </div>
+          <img src="../images/home-page/bottom-text.svg" alt="" class="absolute w-[90%]  bottom-[0%] left-[10%]"> 
+          <a href="https://www.oodabond.com" target="_blank" class=" slide_up_image"><img src="../images/home-page/www.oodabond.com.svg" alt="www.oodabond.com" class="absolute bottom-[1.5%] right-[2%] w-[20%]"/></a>
+        </div>
+
+
+
+        <!-- page 1 ends -->
+       
+        <!-- page 2 starts -->
+        <div class="page">
+          <img src="../images/page2/page_02.webp" alt="page2" class="background_image">
+          <img src="../images/page2/page_2_content.svg" alt="" class="page-2-content">
+          <img src="../images/page2/page_2_ooda_story.svg" alt="" class="page-2-left-top">
+          <img src="../images/page2/page2_top_right.svg" alt="" class="page-2-right-top">
+        </div>
+        <!-- page 2 ends -->
+
+
+        <!-------------------------------- Page 3 starts  ------------------------------------------>
+
+
+
+        <div class="page">
+          <div class="gradient"></div>
+          <img src="../images/new/page3/page_03.webp" alt="page5" class="background_image">
+          <img src="../images/new/page3/toc_head.svg" alt="" class="table_of_contents fade_in_images">
+          <img src="../images/new/page3/toc_content.svg" alt="" class="page5_nav_links fade_in_images">
+          <div class="nav-links-container">
+            <a data-page="4" class="nav-links about-link tb-link" data-audio-path="../audios/about_us.mp3"></a>
+            <a data-page="5" class="nav-links applications-link tb-link" data-audio-path="../audios/applications.mp3"></a>
+            <a data-page="22" class="nav-links products-link tb-link" data-audio-path="../audios/products.mp3"></a>
+            <!-- <a data-page="21" class="nav-links services-link tb-link" ></a> -->
+            
+            <a data-page="34" class="nav-links contactus-link tb-link" data-audio-path="../audios/contact_us.mp3"></a>
+          </div>
+
+        </div>
+
+
+
+        <!-------------------------------- Page 3 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 4 starts ------------------------------------------>
+
+        <div class="page">
+          <div class="gradient"></div>
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/page4/ooda_about_content.webp" alt="about page"
+            class="about_page_content slide_up_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+            <img src="../images/page-no/01.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >          
+        </div>
+
+        <!-------------------------------- Page 4 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 5 start  ------------------------------------------>
+
+
+        <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-1/img-1.webp" alt="marquee images">
+              <img src="../images/product-1/img-2.webp" alt="marquee images">
+              <img src="../images/product-1/img-3.webp" alt="marquee images">
+              <img src="../images/product-1/img-4.webp" alt="marquee images">
+              <img src="../images/product-1/img-1.webp" alt="marquee images">
+              <img src="../images/product-1/img-2.webp" alt="marquee images">
+              <img src="../images/product-1/img-3.webp" alt="marquee images">
+              <img src="../images/product-1/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/02.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+            <img src="../images/product-1/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%] " data-image-animation="right">
+          <img src="../images/product-1/background.webp" alt="page9" class="h-[100%] w-[100%]" >
+        </div>
+        <!-------------------------------- Page 5 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 6 start  ------------------------------------------>
+
+        <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-2/img-1.webp" alt="marquee images">
+              <img src="../images/product-2/img-2.webp" alt="marquee images">
+              <img src="../images/product-2/img-3.webp" alt="marquee images">
+              <img src="../images/product-2/img-4.webp" alt="marquee images">
+              <img src="../images/product-2/img-1.webp" alt="marquee images">
+              <img src="../images/product-2/img-2.webp" alt="marquee images">
+              <img src="../images/product-2/img-3.webp" alt="marquee images">
+              <img src="../images/product-2/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/03.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+            <img src="../images/product-2/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/product-2/background.webp" alt="page9" class="h-[100%] w-[100%]">
+        </div>
+
+        <!-------------------------------- Page 6 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 7 start  ------------------------------------------>
+        
+
+        <div class="page">
+          <img src="../images/product-3/background.webp" alt="page" class="rough-page-2 h-[100%] w-[100%]"/>
+          <img src="../images/product-3/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/page-no/04.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+
+        </div>
+
+        <!-------------------------------- Page 7 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 8 start  ------------------------------------------>
+
+        <div class="page">
+          <img src="../images/product-4/background.webp" alt="page" class="rough-page-2 h-[100%] w-[100%]"/>
+          <img src="../images/product-4/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/page-no/05.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+         
+        </div>
+        <!-------------------------------- Page 8 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 9 start  ------------------------------------------>
+
+         <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-5/img-1.webp" alt="marquee images">
+              <img src="../images/product-5/img-2.webp" alt="marquee images">
+              <img src="../images/product-5/img-3.webp" alt="marquee images">
+              <img src="../images/product-5/img-4.webp" alt="marquee images">
+              <img src="../images/product-5/img-1.webp" alt="marquee images">
+              <img src="../images/product-5/img-2.webp" alt="marquee images">
+              <img src="../images/product-5/img-3.webp" alt="marquee images">
+              <img src="../images/product-5/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/06.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+            <img src="../images/product-5/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/product-5/background.webp" alt="page9" class="h-[100%] w-[100%]">
+        </div>
+
+
+        <!-------------------------------- Page 9 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 10 start  ------------------------------------------>
+
+        <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-6/img-1.webp" alt="marquee images">
+              <img src="../images/product-6/img-2.webp" alt="marquee images">
+              <img src="../images/product-6/img-3.webp" alt="marquee images">
+              <img src="../images/product-6/img-4.webp" alt="marquee images">
+              <img src="../images/product-6/img-1.webp" alt="marquee images">
+              <img src="../images/product-6/img-2.webp" alt="marquee images">
+              <img src="../images/product-6/img-3.webp" alt="marquee images">
+              <img src="../images/product-6/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/07.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+            <img src="../images/product-6/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/product-6/background.webp" alt="page9" class="h-[100%] w-[100%]">
+        </div>
+
+        <!-------------------------------- Page 10 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 11 start  ------------------------------------------>
+        
+
+        <div class="page">
+          <img src="../images/product-7/background.webp" alt="page" class="rough-page-2 h-[100%] w-[100%]"/>
+          <img src="../images/product-7/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/page-no/08.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+
+        </div>
+
+        <!-------------------------------- Page 11 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 12 start  ------------------------------------------>
+        
+
+        <div class="page">
+          <img src="../images/product-8/background.webp" alt="page" class="rough-page-2 h-[100%] w-[100%]"/>
+          <img src="../images/product-8/content.svg" alt="" class="absolute top-[20%] w-[54%] left-[3%]" data-image-animation="right">
+          <img src="../images/page-no/09.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+        </div>
+        <!-------------------------------- Page 12 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 13 start  ------------------------------------------>
+        <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-9/img-1.webp" alt="marquee images">
+              <img src="../images/product-9/img-2.webp" alt="marquee images">
+              <img src="../images/product-9/img-3.webp" alt="marquee images">
+              <img src="../images/product-9/img-4.webp" alt="marquee images">
+              <img src="../images/product-9/img-1.webp" alt="marquee images">
+              <img src="../images/product-9/img-2.webp" alt="marquee images">
+              <img src="../images/product-9/img-3.webp" alt="marquee images">
+              <img src="../images/product-9/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/10.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+            <img src="../images/product-9/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/product-9/background.webp" alt="page9" class="h-[100%] w-[100%]">
+        </div>
+
+        <!-------------------------------- Page 13 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 14 start  ------------------------------------------>
+
+
+        <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-10/img-1.webp" alt="marquee images">
+              <img src="../images/product-10/img-2.webp" alt="marquee images">
+              <img src="../images/product-10/img-3.webp" alt="marquee images">
+              <img src="../images/product-10/img-4.webp" alt="marquee images">
+              <img src="../images/product-10/img-1.webp" alt="marquee images">
+              <img src="../images/product-10/img-2.webp" alt="marquee images">
+              <img src="../images/product-10/img-3.webp" alt="marquee images">
+              <img src="../images/product-10/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/11.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+            <img src="../images/product-10/content.svg" alt="" class="absolute top-[10%] w-[48%] left-[3%]" data-image-animation="right">
+          <img src="../images/product-10/background.webp" alt="page9" class="h-[100%] w-[100%]">
+        </div>
+
+        <!-------------------------------- Page 14 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 15 start  ------------------------------------------>
+
+        <div class="page">
+          <img src="../images/product-11/background.webp" alt="page" class="rough-page-2 h-[100%] w-[100%]"/>
+          <img src="../images/product-11/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/page-no/12.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+        </div>
+
+        <!-------------------------------- Page 15 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 16 start  ------------------------------------------>
+
+        <div class="page">
+          <img src="../images/product-12/background.webp" alt="page" class="rough-page-2 h-[100%] w-[100%]"/>
+          <img src="../images/product-12/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/page-no/13.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+        </div>
+
+        <!-------------------------------- Page 16 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 17 start  ------------------------------------------>
+
+        <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-13/img-1.webp" alt="marquee images">
+              <img src="../images/product-13/img-2.webp" alt="marquee images">
+              <img src="../images/product-13/img-3.webp" alt="marquee images">
+              <img src="../images/product-13/img-4.webp" alt="marquee images">
+              <img src="../images/product-13/img-1.webp" alt="marquee images">
+              <img src="../images/product-13/img-2.webp" alt="marquee images">
+              <img src="../images/product-13/img-3.webp" alt="marquee images">
+              <img src="../images/product-13/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/14.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+            <img src="../images/product-13/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/product-13/background.webp" alt="page9" class="h-[100%] w-[100%]">
+        </div>
+
+        <!-------------------------------- Page 17 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 18 start  ------------------------------------------>
+       
+
+         <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-14/img-1.webp" alt="marquee images">
+              <img src="../images/product-14/img-2.webp" alt="marquee images">
+              <img src="../images/product-14/img-3.webp" alt="marquee images">
+              <img src="../images/product-14/img-4.webp" alt="marquee images">
+              <img src="../images/product-14/img-1.webp" alt="marquee images">
+              <img src="../images/product-14/img-2.webp" alt="marquee images">
+              <img src="../images/product-14/img-3.webp" alt="marquee images">
+              <img src="../images/product-14/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/15.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+            <img src="../images/product-14/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/product-14/background.webp" alt="page9" class="h-[100%] w-[100%]">
+        </div>
+        
+        <!-------------------------------- Page 18 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 19 start  ------------------------------------------>
+
+        <div class="page">
+          <img src="../images/product-15/background.webp" alt="page" class="rough-page-2 h-[100%] w-[100%]"/>
+          <img src="../images/product-15/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/page-no/16.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+        </div>
+
+        <!-------------------------------- Page 19 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 20 start  ------------------------------------------>
+
+        <div class="page">
+          <img src="../images/product-16/background.webp" alt="page" class="rough-page-2 h-[100%] w-[100%]"/>
+          <img src="../images/product-16/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/page-no/17.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+        </div>
+
+        <!-------------------------------- Page 20 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 21 start  ------------------------------------------>
+
+        <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-17/img-1.webp" alt="marquee images">
+              <img src="../images/product-17/img-2.webp" alt="marquee images">
+              <img src="../images/product-17/img-3.webp" alt="marquee images">
+              <img src="../images/product-17/img-4.webp" alt="marquee images">
+              <img src="../images/product-17/img-1.webp" alt="marquee images">
+              <img src="../images/product-17/img-2.webp" alt="marquee images">
+              <img src="../images/product-17/img-3.webp" alt="marquee images">
+              <img src="../images/product-17/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/18.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+            <img src="../images/product-17/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%]" data-image-animation="right">
+          <img src="../images/product-17/background.webp" alt="page9" class="h-[100%] w-[100%]">
+        </div>
+
+        <!-------------------------------- Page 21 ends  ------------------------------------------>
+
+        
+
+
+        <!-------------------------------- Page 15------------------------------------------>
+        <div class="page">
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/109_uc.webp" alt="" class="background_image">
+          <!-- <img src="../images/page14/top_moving_product.svg" alt="" class="top_moving_product"> -->
+
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_14_img_holder">
+            <img src="../images/page14/pg_14_1.webp" alt="" class="product_info slide_up_image h-[65%]! top-[8%]!">
+            <img src="../images/page14/pg_14_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page14/pg_14_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page14/pg_14_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="109_uc">
+          </div>
+           <img src="../images/page-no/19.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 16------------------------------------------>
+        <div class="page">
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/109_uv_uc.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+
+          <div class="product-images-container page_15_img_holder">
+            <img src="../images/page15/pg_15_1.webp" alt="" class="product_info slide_up_image h-[64%]!">
+            <img src="../images/page15/pg_15_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page15/pg_15_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page15/pg_15_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="109_uv_uc">
+          </div>
+           <img src="../images/page-no/20.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 17------------------------------------------>
+        <div class="page">
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/1k_single.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+
+          <div class="product-images-container page_16_img_holder">
+            <img src="../images/page16/pg_16_1.webp" alt="" class="product_info slide_up_image h-[65%]! ">
+            <img src="../images/page16/pg_16_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page16/pg_16_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page16/pg_16_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="1k_single_part_epoxy">
+          </div>
+           <img src="../images/page-no/21.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 18------------------------------------------>
+        <div class="page">
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/tg_109.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_17_img_holder">
+            <img src="../images/page17/pg_17_1.webp" alt="" class="product_info slide_up_image top-[5%]! z-[9]">
+            <img src="../images/page17/pg_17_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page17/pg_17_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page17/pg_17_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="tg_109">
+          </div>
+           <img src="../images/page-no/22.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 19------------------------------------------>
+      
+<div class="page">
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/pre_applied.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_19_img_holder">
+            <img src="../images/page19/pg_19_1.webp" alt="" class="product_info slide_up_image top-[5%]! z-[9]">
+            <img src="../images/page19/pg_19_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page19/pg_19_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page19/pg_19_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="pre_applied_coating">
+          </div>
+           <img src="../images/page-no/23.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+        <!-------------------------------- Page 20------------------------------------------>
+        
+
+          <div class="page">
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/v52.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_18_img_holder">
+            <img src="../images/page18/pg_18_1.webp" alt="" class="product_info slide_up_image h-[63%]!">
+            <img src="../images/page18/pg_18_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page18/pg_18_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page18/pg_18_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="aluminium_putty">
+          </div>
+           <img src="../images/page-no/24.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+        <!-------------------------------- Page 21------------------------------------------>
+        <div class="page">
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/1116_metal.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_20_img_holder">
+            <img src="../images/page20/pg_20_1.webp" alt="" class="product_info slide_up_image h-[64%]! top-[8%]!">
+            <img src="../images/page20/pg_20_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page20/pg_20_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page20/pg_20_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="11116_metal_expoxy">
+          </div>
+           <img src="../images/page-no/25.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 22------------------------------------------>
+        <div class="page">
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/nylon_liquid.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_21_img_holder">
+            <img src="../images/page21/pg_21_1.webp" alt="" class="product_info slide_up_image h-[64%]! top-[8%]!">
+            <img src="../images/page21/pg_21_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page21/pg_21_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page21/pg_21_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="nylon">
+          </div>
+           <img src="../images/page-no/26.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 23------------------------------------------>
+        <div class="page">
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/mos2.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_22_img_holder">
+            <img src="../images/page22/pg_22_1.webp" alt="" class="product_info slide_up_image h-[63%]!">
+            <img src="../images/page22/pg_22_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page22/pg_22_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page22/pg_22_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="ms02_coating">
+          </div>
+           <img src="../images/page-no/27.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 24------------------------------------------>
+        <div class="page">
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/high_temperature.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_23_img_holder">
+            <img src="../images/page23/pg_23_1.webp" alt="" class="product_info slide_up_image h-[66%]! top-[5%]! z-[9]!">
+            <img src="../images/page23/pg_23_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page23/pg_23_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page23/pg_23_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="high_temperature">
+          </div>
+           <img src="../images/page-no/28.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 25------------------------------------------>
+        <div class="page">
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/high_strength.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_24_img_holder">
+            <img src="../images/page24/pg_24_1.webp" alt="" class="product_info slide_up_image">
+            <img src="../images/page24/pg_24_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page24/pg_24_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page24/pg_24_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="6838_high_strength">
+          </div>
+           <img src="../images/page-no/29.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-- applications -->
+       
+
+      
+        <!-------------------------------- Page 26------------------------------------------>
+        <div class="page">
+          <img src="../images/bg/desktop/page_25.webp" alt="" class="background_image">
+          <img src="../images/page25/thankyou.webp" alt="" class="thankyou_img fade_in_images">
+          <div class="gradient"></div>
+           
+        </div>
+
+        <!-------------------------------- Page 27------------------------------------------>
+        <div class="page">
+          <img src="../images/bg/desktop/page_26.webp" alt="" class="background_image">
+          <img src="../images/page26/contact_image.webp" alt="" class="contact_img fade_in_images">
+          <a href="https://www.oodabond.com/" class="contact-links website-link" target="_blank"></a>
+          <a href="tel:+917397375699" class="contact-links phone-link1" target="_blank"></a>
+          <a href="tel:+919840338011" class="contact-links phone-link2" target="_blank"></a>
+          <a href="https://maps.app.goo.gl/7B5RrtVwYdreoXLu6" class="contact-links map-link" target="_blank"></a>
+          <a href="mailto:ooagys@gmail.com" class="contact-links email-link1" target="_blank"></a>
+          <a href="mailto:customercare@oodabond.com" class="contact-links email-link2" target="_blank"></a>
+        </div>
+
+
+
+
+
+        <a ignore="1" class="ui-arrow-control ui-arrow-next-page"></a>
+        <a ignore="1" class="ui-arrow-control ui-arrow-previous-page"></a>
+      </div>
+    </div>
+
+
+
+    <!-- <audio id="page-8audio">
+      <source src="../assets/voice/contactus.mp3" type="audio/mp3">
+    </audio> -->
+
+    <audio id="flipaudio" src="./pageflip.mp3"></audio>
+
+    <!-- controls -->
+    <div id="controls">
+      <div class="all">
+
+
+        <!-- zoom slider -->
+        <div id="zoom-slider-view" class="zoom-slider">
+          <div class="bg">
+            <div class="ui-slider" id="zoom-slider">
+              <div class="bar">
+                <div class="progress-width">
+                  <div class="progress">
+                    <div class="handler"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / zoom slider -->
+      </div>
+
+      <div id="ui-icon-expand-options">
+        <a class="ui-icon show-hint">
+          <i class="fa fa-ellipsis-h"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- / controls -->
+
+    <!-- miniatures -->
+    <div id="miniatures" class="ui-miniatures-slider">
+    </div>
+    <!-- / miniatures -->
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+  <script type="text/javascript">
+    // Change these settings
+ 
+    gsap.config({
+      nullTargetWarn: false
+    });
+ 
+    let windowWidth = window.innerWidth;
+    let windowHeight = window.innerHeight;
+    const normal = { width: 1300, height: 800 };
+ 
+    const heightLower = (windowHeight >= 700) ? 690 : 550;
+    const widthLower = (windowHeight >= 700) ? 1100 : 900;
+ 
+    const lower = { width: widthLower, height: heightLower };
+ 
+    const crctSize = (windowWidth > 1280) ? normal : lower;
+ 
+    console.log('correct width: ', crctSize.width);
+    console.log('correct height: ', crctSize.height);
+    FlipbookSettings = {
+      options: {
+        width: crctSize.width,
+        height: crctSize.height,
+        autoCenter: true,
+        pages: 8,
+        when: {
+          turning: function (e, page, view) {
+            var audio = document.getElementById("flipaudio");
+            audio.play();
+          }
+        },
+      },
+    };
+ 
+    $(window).load(function (event) {
+      $("#flipbook .page-1").addClass('animation-on');
+    });
+    $('.full-screen').on('click', function () {
+      window.parent.postMessage({ action: "toggleFullscreen" }, "*");
+    });
+ 
+    $('#flipbook').bind('turned', function (event, page, view) {
+      console.log(`event: ${event}`);
+      console.log(`view: ${view}`);
+      animateImages(view);
+      // resetPageImages();
+    });
+ 
+    $('#flipbook').bind('turning', function (event, page, view) {
+      // resetPageImages(); // Clear or reset before the page turns
+      if(page === 1){
+        page_1_Animation();
+      }
+    });
+ 
+ 
+  window.addEventListener("message", function (event) {
+    // OPTIONAL BUT RECOMMENDED: verify origin
+    // if (event.origin !== "https://your-parent-domain.com") return;
+ 
+    const data = event.data;
+ 
+    if (data && data.trigger === "startAnimation") {
+      console.log("start animation triggered");
+      page_1_Animation();
+    }
+  });
+ 
+ 
+let currentPage = 4;
+ 
+document.addEventListener("DOMContentLoaded", () => {
+ 
+    // Apply active based on current page
+    document.querySelectorAll(".tb-link").forEach(item => {
+        if (item.getAttribute("data-page") == currentPage) {
+            item.classList.add("active");
+        }
+    });
+ 
+    // On click update active thumbnail
+    document.querySelectorAll('.tb-link').forEach(item => {
+        item.addEventListener('click', function () {
+ 
+            // Remove previous active
+            document.querySelectorAll('.tb-link')
+                .forEach(el => el.classList.remove('active'));
+ 
+            // Add active to clicked item
+            this.classList.add('active');
+ 
+            // Update currentPage variable
+            currentPage = this.getAttribute("data-page");
+        });
+    });
+});
+ 
+ 
+   const popup_pgs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,  12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27];
+    const slideIn_pgs = [1, 2, 4, 6, 7, 8, , 9, 10, 11, 12, 13, 14, 15, 16];
+    const fadeIn_pgs = [3, 4, 25, 26, 28];
+ 
+    function animateImages(view) {
+      const [leftPage, rightPage] = view.toString().split(',').map(Number);
+ 
+      if (popup_pgs.includes(leftPage) || popup_pgs.includes(rightPage)) { popupImage(leftPage, rightPage); }
+      if (slideIn_pgs.includes(leftPage) || slideIn_pgs.includes(rightPage)) { slideUpImage(leftPage, rightPage); }
+      if (fadeIn_pgs.includes(leftPage) || fadeIn_pgs.includes(rightPage)) { fadeInImage(leftPage, rightPage); }
+ 
+     
+    }
+ 
+    function popupImage(leftPage, rightPage) {
+      // popup for application pages
+      gsap.fromTo(`.page-${leftPage} .services_grid_main img`,
+        { opacity: 0, scale: 0.5 },
+        {
+          opacity: 1,
+          scale: 1,
+          stagger: 0.2,
+          duration: 0.75,
+          ease: "power3.out"
+        }
+      );
+      gsap.fromTo(`.page-${rightPage} .services_grid_main img`,
+        { opacity: 0, scale: 0.5 },
+        {
+          opacity: 1,
+          scale: 1,
+          stagger: 0.2,
+          duration: 0.75,
+          ease: "power3.out"
+        }
+      );
+ 
+      // popup for normal usage
+      gsap.fromTo(`.page-${leftPage} .popup`,
+        { opacity: 0, scale: 0.5 },
+        {
+          opacity: 1,
+          scale: 1,
+          stagger: 0.2,
+          duration: 0.75,
+          ease: "power3.out"
+        }
+      );
+      gsap.fromTo(`.page-${rightPage} .popup`,
+        { opacity: 0, scale: 0.5 },
+        {
+          opacity: 1,
+          scale: 1,
+          stagger: 0.2,
+          duration: 0.75,
+          ease: "power3.out"
+        }
+      );
+    }
+ 
+    function slideUpImage(leftPage, rightPage) {
+      gsap.fromTo(`.page-${leftPage} .slide_up_image`,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          duration: 0.95,
+          ease: "power3.out"
+        }
+      );
+      gsap.fromTo(`.page-${rightPage} .slide_up_image`,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          duration: 0.95,
+          ease: "power3.out"
+        }
+      );
+    }
+ 
+    function fadeInImage(leftPage, rightPage) {
+      gsap.fromTo(`.page-${leftPage} .fade_in_images`,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          stagger: 0.2,
+          duration: 0.95,
+          ease: "power3.out"
+        }
+      );
+      gsap.fromTo(`.page-${rightPage} .fade_in_images`,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          stagger: 0.2,
+          duration: 0.95,
+          ease: "power3.out"
+        }
+      );
+    }
+ 
+    function resetPageImages() {
+      gsap.set('.services_grid_main img, .slide_up_image, .fade_in_images, .popup', { opacity: 0 });
+    }
+ 
+    function resetPage1Animation() {
+     gsap.set('.page_image1 .popup_images1', {opacity: 0});
+    }
+ 
+ 
+ function page_1_Animation() {
+     resetPage1Animation();
+      gsap.fromTo('.page_image1 .popup_images1',
+        { opacity: 0, scale: 0.5 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 1.5,
+          delay: 0.1,
+          stagger: 0.5,
+          ease: "power3.out"
+        }
+      );
+     
+    }
+ 
+    document.addEventListener("DOMContentLoaded", function(){
+      resetPage1Animation();
+    });
+  </script>
+
+
+
+  <script type="text/javascript" src="script.js"></script>
+
+  <script>
+    const boxes = Array.from(document.querySelectorAll('.image-box'));
+    const order = [0, 1, 2, 5, 4, 3, 6, 7, 8];
+
+    order.forEach((i, index) => {
+      const box = boxes[i];
+      if (box) {
+        setTimeout(() => {
+          box.classList.add('fadeIn');
+        }, index * 500);
+      }
+    });
+  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get all toc links
+    const tocLinks = document.querySelectorAll(".tb-link");
+
+    // Loop through each link
+    tocLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        const page = this.getAttribute("data-page");   // page number
+        const audioPath = this.getAttribute("data-audio-path"); // audio
+
+        // Flip to the page
+        $("#flipbook").turn("page", parseInt(page));
+        console.log(`Audio path: ${audioPath}`);
+
+        // Play audio if available
+        if (audioPath) {
+          let audio = new Audio(audioPath);
+          audio.play();
+          console.log(`Audio playing`);
+        }
+      });
+    });
+  });
+</script>
+</body>
+
+
+</html>

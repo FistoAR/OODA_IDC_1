@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OODA BOND Digital Catalogue</title>
+  <link rel="icon" href="../logo.webp">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind Css  -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body style="background-color: gainsboro;">
+
+
+
+  
+  <!-- <button id="navToggle" class="nav-toggle-btn" aria-label="Toggle menu" aria-expanded="false">
+    <span class="hamburger-icon">
+      <span class="hamburger-bar bar1"></span>
+      <span class="hamburger-bar bar2"></span>
+      <span class="hamburger-bar bar3"></span>
+    </span>
+  </button> -->
+  <img src="../images/thumbnail/icon.svg" alt="foundation_thumbnails" id="navToggle" class="nav-toggle-btn" style=" border: none; border-radius: 25%;"/>
+
+  <!-- Overlay -->
+  <div id="navOverlay" class="nav-overlay"></div>
+  <!-- Floating Table of Contents Nav -->
+  <nav id="tocNav" class="toc-floating" aria-label="Table of Contents">
+    <div class="toc-title">Table of Contents</div>
+     <ul class="toc-list">
+          
+          <li class="tb-link cursor-pointer" data-target="home" data-audio-path="../audios/home.mp3"><a> ◆   Home </a></li>
+           <li class="tb-link cursor-pointer" data-target="about-us" data-audio-path="../audios/about_us.mp3"><a>◆   About us</a></li>
+           <li class="tb-link cursor-pointer" data-target="applications" data-audio-path="../audios/applications.mp3"><a>◆   Applications</a></li>
+           <li class="tb-link cursor-pointer" data-target="products" data-audio-path="../audios/products.mp3"><a>◆   Products  </a></li>
+          <li class="tb-link cursor-pointer" data-target="contact-us" data-audio-path="../audios/contact_us.mp3"><a>◆   Contact Us  </a></li>
+        </ul>
+
+          
+
+  </nav>
+  <audio id="navAudio"></audio>
+  <button  aria-label="Share this page">
+     <img src="../images/thumbnail/share.svg" id="shareBtn" class="share-btn"/>
+  </button> 
+  <div class="share-menu" id="shareMenu" role="menu" aria-hidden="true">
+        <div class="share-link-row">
+          <input id="shareInput" type="text">
+          <button id="copyLinkBtn" class="copy-link-btn" role="menuitem">Copy Link</button>
+        </div>
+        <span class="copied-msg" id="copiedMsg">Copied!</span>
+      </div>
+ 
+      
+
+
+
+
+<!-- <div>
+  <img id="goToPage1" data-audio-path="../audios/home.mp3" src="../images/home-icon.svg" alt="home-icon" class="absolute w-[58px] h-[58px] right-[3%] top-[3%] p-[11px] z-1005 border-black rounded-full bg-white  hover:bg-[#fcb33e] cursor-pointer fixed home-icon"/>
+</div> -->
+
+
+
+
+  <div class="back-top-wrapper">
+    <div class="back-top-button">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+  </div>
+
+         <!-- page 1 starts-->
+
+       
+       <div class="page relative" id="home">
+        <img src="../images/bg/white_page.webp" />
+          <img src="../images/bg/Background-img.webp" alt="" class="absolute w-[100%] h-[100%] top-0 left-0"> 
+          <img src="../images/home-page/premium-quality-products.svg" alt="" class="absolute w-[60%]  top-[3%] left-[10%]"> 
+          <img src="../images/home-page/home-page-line-1-img.webp" alt="" class="absolute w-[100%]  top-[6%] left-[0%]"> 
+          <img src="../images/home-page/home-page-line-2-img.webp" alt="" class="absolute w-[100%]  top-[26%] left-[0%]"> 
+          <img src="../images/home-page/home-page-line-3-img.webp" alt="" class="absolute w-[100%]  top-[46.5%] left-[0%]"> 
+          <img src="../images/home-page/bottom-text.svg" alt="" class="absolute w-[90%]  bottom-[0%] left-[10%]"> 
+          <a href="https://www.oodabond.com" target="_blank" class=""><img src="../images/home-page/www.oodabond.com.svg" alt="www.oodabond.com" class="absolute bottom-[1.5%] right-[2%] w-[20%] "/></a>
+        </div>
+          
+      
+
+               <!-- page 1 ends -->
+       
+        <!-- page 2 starts -->
+        <div class="page">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%] "/>
+          <img src="../images/page2/page_02.webp" alt="page2" class=" background_image slide_up_image">
+          <img src="../images/page2/page_2_content.svg" alt="" class="page-2-content slide_up_image">
+          <img src="../images/page2/page_2_ooda_story.svg" alt="" class="page-2-left-top slide_up_image">
+          <img src="../images/page2/page2_top_right.svg" alt="" class="page-2-right-top slide_up_image">
+        </div>
+        <!-- page 2 ends -->
+
+
+        <!-------------------------------- Page 3 starts  ------------------------------------------>
+
+
+
+        <div class="page">
+     
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%] "/>
+
+          <img src="../images/new/page3/page_03.webp" alt="page5" class="background_image">
+          <img src="../images/new/page3/toc_head.svg" alt="" class="table_of_contents fade_in_images">
+          <img src="../images/new/page3/toc_content.svg" alt="" class="page5_nav_links fade_in_images slide_up_image">
+          <div class="nav-links-container">
+            <a data-page="4" data-target="about-us" class="nav-links about-link tb-link"></a>
+            <a data-page="4" data-target="products" class="nav-links products-link tb-link"></a>
+            <a data-page="23" data-target="applications" class="nav-links applications-link tb-link"></a>
+            <!-- <a data-page="21" class="nav-links services-link tb-link"></a> -->
+            
+            <a data-page="34" data-target="contact-us" class="nav-links contactus-link tb-link"></a>
+          </div>
+
+        </div>
+
+
+
+        <!-------------------------------- Page 3 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 4 starts ------------------------------------------>
+
+        <div class="page" id="about-us">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%] "/>
+
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/page4/ooda_about_content.webp" alt="about page"
+            class="about_page_content slide_up_image ">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <img src="../images/page-no/01.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+        </div>
+
+        <!-------------------------------- Page 4 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 5 start  ------------------------------------------>
+
+
+        <div class="page" id="applications">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-1/img-1.webp" alt="marquee images">
+              <img src="../images/product-1/img-2.webp" alt="marquee images">
+              <img src="../images/product-1/img-3.webp" alt="marquee images">
+              <img src="../images/product-1/img-4.webp" alt="marquee images">
+              <img src="../images/product-1/img-1.webp" alt="marquee images">
+              <img src="../images/product-1/img-2.webp" alt="marquee images">
+              <img src="../images/product-1/img-3.webp" alt="marquee images">
+              <img src="../images/product-1/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/02.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+            <img src="../images/product-1/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/product-1/background.webp" alt="page9" class="">
+        </div>
+        <!-------------------------------- Page 5 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 6 start  ------------------------------------------>
+
+        <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-2/img-1.webp" alt="marquee images">
+              <img src="../images/product-2/img-2.webp" alt="marquee images">
+              <img src="../images/product-2/img-3.webp" alt="marquee images">
+              <img src="../images/product-2/img-4.webp" alt="marquee images">
+              <img src="../images/product-2/img-1.webp" alt="marquee images">
+              <img src="../images/product-2/img-2.webp" alt="marquee images">
+              <img src="../images/product-2/img-3.webp" alt="marquee images">
+              <img src="../images/product-2/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/03.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+            <img src="../images/product-2/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/product-2/background.webp" alt="page9" class="">
+        </div>
+
+        <!-------------------------------- Page 6 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 7 start  ------------------------------------------>
+        
+
+        <div class="page">
+          <img src="../images/product-3/background.webp" alt="page" class="rough-page-2"/>
+          <img src="../images/product-3/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/page-no/04.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+
+        </div>
+
+        <!-------------------------------- Page 7 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 8 start  ------------------------------------------>
+
+        <div class="page">
+          <img src="../images/product-4/background.webp" alt="page" class="rough-page-2"/>
+          <img src="../images/product-4/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%] slide_up_image"  data-image-animation="right">
+          <img src="../images/page-no/05.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+         
+        </div>
+        <!-------------------------------- Page 8 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 9 start  ------------------------------------------>
+
+         <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-5/img-1.webp" alt="marquee images">
+              <img src="../images/product-5/img-2.webp" alt="marquee images">
+              <img src="../images/product-5/img-3.webp" alt="marquee images">
+              <img src="../images/product-5/img-4.webp" alt="marquee images">
+              <img src="../images/product-5/img-1.webp" alt="marquee images">
+              <img src="../images/product-5/img-2.webp" alt="marquee images">
+              <img src="../images/product-5/img-3.webp" alt="marquee images">
+              <img src="../images/product-5/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/06.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+            <img src="../images/product-5/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/product-5/background.webp" alt="page9" class="">
+        </div>
+
+
+        <!-------------------------------- Page 9 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 10 start  ------------------------------------------>
+
+        <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-6/img-1.webp" alt="marquee images">
+              <img src="../images/product-6/img-2.webp" alt="marquee images">
+              <img src="../images/product-6/img-3.webp" alt="marquee images">
+              <img src="../images/product-6/img-4.webp" alt="marquee images">
+              <img src="../images/product-6/img-1.webp" alt="marquee images">
+              <img src="../images/product-6/img-2.webp" alt="marquee images">
+              <img src="../images/product-6/img-3.webp" alt="marquee images">
+              <img src="../images/product-6/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/07.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+            <img src="../images/product-6/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/product-6/background.webp" alt="page9" class="">
+        </div>
+
+        <!-------------------------------- Page 10 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 11 start  ------------------------------------------>
+        
+
+        <div class="page">
+          <img src="../images/product-7/background.webp" alt="page" class="rough-page-2"/>
+          <img src="../images/product-7/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/page-no/08.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+
+        </div>
+
+        <!-------------------------------- Page 11 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 12 start  ------------------------------------------>
+        
+
+        <div class="page">
+          <img src="../images/product-8/background.webp" alt="page" class="rough-page-2"/>
+          <img src="../images/product-8/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/page-no/09.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+        </div>
+        <!-------------------------------- Page 12 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 13 start  ------------------------------------------>
+        <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-9/img-1.webp" alt="marquee images">
+              <img src="../images/product-9/img-2.webp" alt="marquee images">
+              <img src="../images/product-9/img-3.webp" alt="marquee images">
+              <img src="../images/product-9/img-4.webp" alt="marquee images">
+              <img src="../images/product-9/img-1.webp" alt="marquee images">
+              <img src="../images/product-9/img-2.webp" alt="marquee images">
+              <img src="../images/product-9/img-3.webp" alt="marquee images">
+              <img src="../images/product-9/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/10.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+            <img src="../images/product-9/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/product-9/background.webp" alt="page9" class="">
+        </div>
+
+        <!-------------------------------- Page 13 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 14 start  ------------------------------------------>
+
+
+        <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-10/img-1.webp" alt="marquee images">
+              <img src="../images/product-10/img-2.webp" alt="marquee images">
+              <img src="../images/product-10/img-3.webp" alt="marquee images">
+              <img src="../images/product-10/img-4.webp" alt="marquee images">
+              <img src="../images/product-10/img-1.webp" alt="marquee images">
+              <img src="../images/product-10/img-2.webp" alt="marquee images">
+              <img src="../images/product-10/img-3.webp" alt="marquee images">
+              <img src="../images/product-10/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/11.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+            <img src="../images/product-10/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/product-10/background.webp" alt="page9" class="">
+        </div>
+
+        <!-------------------------------- Page 14 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 15 start  ------------------------------------------>
+
+        <div class="page">
+          <img src="../images/product-11/background.webp" alt="page" class="rough-page-2"/>
+          <img src="../images/product-11/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/page-no/12.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+        </div>
+
+        <!-------------------------------- Page 15 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 16 start  ------------------------------------------>
+
+        <div class="page">
+          <img src="../images/product-12/background.webp" alt="page" class="rough-page-2"/>
+          <img src="../images/product-12/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/page-no/13.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+        </div>
+
+        <!-------------------------------- Page 16 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 17 start  ------------------------------------------>
+
+        <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-13/img-1.webp" alt="marquee images">
+              <img src="../images/product-13/img-2.webp" alt="marquee images">
+              <img src="../images/product-13/img-3.webp" alt="marquee images">
+              <img src="../images/product-13/img-4.webp" alt="marquee images">
+              <img src="../images/product-13/img-1.webp" alt="marquee images">
+              <img src="../images/product-13/img-2.webp" alt="marquee images">
+              <img src="../images/product-13/img-3.webp" alt="marquee images">
+              <img src="../images/product-13/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/14.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+            <img src="../images/product-13/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/product-13/background.webp" alt="page9" class="">
+        </div>
+
+        <!-------------------------------- Page 17 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 18 start  ------------------------------------------>
+       
+
+         <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-14/img-1.webp" alt="marquee images">
+              <img src="../images/product-14/img-2.webp" alt="marquee images">
+              <img src="../images/product-14/img-3.webp" alt="marquee images">
+              <img src="../images/product-14/img-4.webp" alt="marquee images">
+              <img src="../images/product-14/img-1.webp" alt="marquee images">
+              <img src="../images/product-14/img-2.webp" alt="marquee images">
+              <img src="../images/product-14/img-3.webp" alt="marquee images">
+              <img src="../images/product-14/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/15.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+            <img src="../images/product-14/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/product-14/background.webp" alt="page9" class="">
+        </div>
+        
+        <!-------------------------------- Page 18 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 19 start  ------------------------------------------>
+
+        <div class="page">
+          <img src="../images/product-15/background.webp" alt="page" class="rough-page-2"/>
+          <img src="../images/product-15/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/page-no/16.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+        </div>
+
+        <!-------------------------------- Page 19 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 20 start  ------------------------------------------>
+
+        <div class="page">
+          <img src="../images/product-16/background.webp" alt="page" class="rough-page-2"/>
+          <img src="../images/product-16/content.svg" alt="" class="absolute top-[20%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/page-no/17.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+        </div>
+
+        <!-------------------------------- Page 20 ends  ------------------------------------------>
+
+        <!-------------------------------- Page 21 start  ------------------------------------------>
+
+        <div class="page">
+          <div class="page_marquee_content_wrapper">
+            <div class="page_marquee_content">
+              <img src="../images/product-17/img-1.webp" alt="marquee images">
+              <img src="../images/product-17/img-2.webp" alt="marquee images">
+              <img src="../images/product-17/img-3.webp" alt="marquee images">
+              <img src="../images/product-17/img-4.webp" alt="marquee images">
+              <img src="../images/product-17/img-1.webp" alt="marquee images">
+              <img src="../images/product-17/img-2.webp" alt="marquee images">
+              <img src="../images/product-17/img-3.webp" alt="marquee images">
+              <img src="../images/product-17/img-4.webp" alt="marquee images">
+            </div>
+          </div>
+            <img src="../images/page-no/18.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+            <img src="../images/product-17/content.svg" alt="" class="absolute top-[10%] w-[50%] left-[3%] slide_up_image" data-image-animation="right">
+          <img src="../images/product-17/background.webp" alt="page9" class="">
+        </div>
+
+        <!-------------------------------- Page 21 ends  ------------------------------------------>
+
+        
+
+        <!-------------------------------- Page 15------------------------------------------>
+        <div class="page" id="products">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%]"/>
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/109_uc.webp" alt="" class="background_image">
+          <!-- <img src="../images/page14/top_moving_product.svg" alt="" class="top_moving_product"> -->
+
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_14_img_holder">
+            <img src="../images/page14/pg_14_1.webp" alt="" class="product_info slide_up_image h-[66%]!">
+            <img src="../images/page14/pg_14_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page14/pg_14_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page14/pg_14_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="109_uc">
+          </div>
+          <img src="../images/page-no/19.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 16------------------------------------------>
+        <div class="page">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%]"/>
+
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/109_uv_uc.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+
+          <div class="product-images-container page_15_img_holder">
+            <img src="../images/page15/pg_15_1.webp" alt="" class="product_info slide_up_image h-[64%]!">
+            <img src="../images/page15/pg_15_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page15/pg_15_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page15/pg_15_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="109_uv_uc">
+          </div>
+          <img src="../images/page-no/20.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 17------------------------------------------>
+        <div class="page">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%]"/>
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/1k_single.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+
+          <div class="product-images-container page_16_img_holder">
+            <img src="../images/page16/pg_16_1.webp" alt="" class="product_info slide_up_image h-[65%]! ">
+            <img src="../images/page16/pg_16_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page16/pg_16_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page16/pg_16_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="1k_single_part_epoxy">
+          </div>
+          <img src="../images/page-no/21.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 18------------------------------------------>
+        <div class="page">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%]"/>
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/tg_109.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_17_img_holder">
+            <img src="../images/page17/pg_17_1.webp" alt="" class="product_info slide_up_image">
+            <img src="../images/page17/pg_17_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page17/pg_17_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page17/pg_17_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="tg_109">
+          </div>
+          <img src="../images/page-no/22.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 19------------------------------------------>
+      
+<div class="page">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%]"/>
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/pre_applied.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_19_img_holder">
+            <img src="../images/page19/pg_19_1.webp" alt="" class="product_info slide_up_image">
+            <img src="../images/page19/pg_19_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page19/pg_19_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page19/pg_19_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="pre_applied_coating">
+          </div>
+          <img src="../images/page-no/23.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+        <!-------------------------------- Page 20------------------------------------------>
+        
+
+          <div class="page">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%]"/>
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/v52.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_18_img_holder">
+            <img src="../images/page18/pg_18_1.webp" alt="" class="product_info slide_up_image h-[63%]!">
+            <img src="../images/page18/pg_18_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page18/pg_18_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page18/pg_18_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="aluminium_putty">
+          </div>
+          <img src="../images/page-no/24.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+        <!-------------------------------- Page 21------------------------------------------>
+        <div class="page">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%]"/>
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/1116_metal.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_20_img_holder">
+            <img src="../images/page20/pg_20_1.webp" alt="" class="product_info slide_up_image">
+            <img src="../images/page20/pg_20_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page20/pg_20_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page20/pg_20_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="11116_metal_expoxy">
+          </div>
+          <img src="../images/page-no/25.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 22------------------------------------------>
+        <div class="page">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%]"/>
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/nylon_liquid.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_21_img_holder">
+            <img src="../images/page21/pg_21_1.webp" alt="" class="product_info slide_up_image">
+            <img src="../images/page21/pg_21_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page21/pg_21_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page21/pg_21_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="nylon">
+          </div>
+          <img src="../images/page-no/26.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 23------------------------------------------>
+        <div class="page">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%]"/>
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/mos2.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_22_img_holder">
+            <img src="../images/page22/pg_22_1.webp" alt="" class="product_info slide_up_image h-[63%]!">
+            <img src="../images/page22/pg_22_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page22/pg_22_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page22/pg_22_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="ms02_coating">
+          </div>
+          <img src="../images/page-no/27.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 24------------------------------------------>
+        <div class="page">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%]"/>
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/high_temperature.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_23_img_holder">
+            <img src="../images/page23/pg_23_1.webp" alt="" class="product_info slide_up_image">
+            <img src="../images/page23/pg_23_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page23/pg_23_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page23/pg_23_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="high_temperature">
+          </div>
+          <img src="../images/page-no/28.svg" alt="" class="absolute bottom-[1%] w-[5%] right-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 25------------------------------------------>
+        <div class="page">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%]"/>
+          <img src="../images/new/top_bottom/top.webp" alt="" class="top_image">
+          <img src="../images/new/top_bottom/bottom.webp" alt="" class="bottom_image">
+          <img src="../images/new/product_bg/high_strength.webp" alt="" class="background_image">
+          <img src="../logo.svg" alt="" class="page3-logo slide_up_image">
+          <div class="product-images-container page_24_img_holder">
+            <img src="../images/page24/pg_24_1.webp" alt="" class="product_info slide_up_image">
+            <img src="../images/page24/pg_24_2.webp" alt="" class="bottom_img_row slide_up_image">
+            <img src="../images/page24/pg_24_3.webp" alt="" class="bg_and_icons slide_up_image">
+            <img src="../images/page24/pg_24_4.webp" alt="" class="product_image slide_up_image"
+              data-model-page="6838_high_strength">
+          </div>
+          <img src="../images/page-no/29.svg" alt="" class="absolute bottom-[1%] w-[5%] left-[3%] z-11" >
+          <div class="gradient"></div>
+        </div>
+
+        <!-- applications -->
+       
+
+      
+        <!-------------------------------- Page 26------------------------------------------>
+        <div class="page">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%]"/>
+          <img src="../images/bg/desktop/page_25.webp" alt="" class="background_image">
+          <img src="../images/page25/thankyou.webp" alt="" class="thankyou_img fade_in_images">
+          <div class="gradient"></div>
+        </div>
+
+        <!-------------------------------- Page 27------------------------------------------>
+        <div class="page" id="contact-us">
+          <img src="../images/bg/white_page.webp" alt="white-page" class="w-[100%] h-[100%]"/>
+          <img src="../images/bg/desktop/page_26.webp" alt="" class="background_image">
+          <img src="../images/page26/contact_image.webp" alt="" class="contact_img fade_in_images">
+          <a href="https://www.oodabond.com/" class="contact-links website-link" target="_blank"></a>
+          <a href="tel:+917397375699" class="contact-links phone-link1" target="_blank"></a>
+          <a href="tel:+919840338011" class="contact-links phone-link2" target="_blank"></a>
+          <a href="https://maps.app.goo.gl/7B5RrtVwYdreoXLu6" class="contact-links map-link" target="_blank"></a>
+          <a href="mailto:ooagys@gmail.com" class="contact-links email-link1" target="_blank"></a>
+          <a href="mailto:customercare@oodabond.com" class="contact-links email-link2" target="_blank"></a>
+        </div>
+
+
+
+      
+
+  <audio id="infoAudio" preload="auto"></audio>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+  <script>
+    window.addEventListener("message", function (event) {
+      if (event.data && event.data.trigger === "startAnimation") {
+        const boxes = Array.from(document.querySelectorAll('.image-box'));
+        const order = [0, 1, 2, 5, 4, 3, 6, 7, 8];
+
+        order.forEach((i, index) => {
+          const box = boxes[i];
+          if (box) {
+            setTimeout(() => {
+              box.classList.add('fadeIn');
+            }, index * 500);
+          }
+        });
+      }
+    });
+
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get all toc links
+    const tocLinks = document.querySelectorAll(".tb-link");
+
+    // Loop through each link
+    tocLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        const targetId = this.getAttribute("data-target");
+    const audioPath = this.getAttribute("data-audio-path");
+
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+
+        // Play audio if available
+        if (audioPath) {
+          let audio = new Audio(audioPath);
+          audio.play();
+        }
+      });
+    });
+  });
+</script>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
