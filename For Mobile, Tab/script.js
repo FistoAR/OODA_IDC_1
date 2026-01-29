@@ -219,7 +219,7 @@ productImages.forEach(product => {
     product.addEventListener("click", ()=>{
         const getModel = product.getAttribute('data-model-page');
         if (getModel) {
-            window.open(`/lightbox/index.html#${getModel}`, '_blank');
+            window.open(`../lightbox/index.html#${getModel}`, '_blank');
         }
     });
 });
